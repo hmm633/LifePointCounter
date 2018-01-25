@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cs371m.lifepointcounter.ScoreScreen"
+    android:background="#626465">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <Button
+        android:id="@+id/add_player"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="@string/add_player"
+        android:textSize="35sp"
+        android:background="#4c5908"
+        android:foregroundGravity="left"
+        android:layout_below="@id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="addPlayer"/>
+
+    <Button
+        android:id="@+id/remove_player"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="@string/remove_player"
+        android:textSize="35sp"
+        android:background="@color/removePlayerColorLight"
+        android:foregroundGravity="right"
+        android:layout_below="@id/view"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="removePlayer"/>
+
+    <TextView
+        android:id="@id/Player1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Player1"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:layout_below="@id/add_player"
+        />
+
+    <TextView
+        android:id="@+id/Player2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Player2"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:layout_below="@id/add_player"
+        android:layout_toRightOf="@id/Player1"
+        />
+
+    <RelativeLayout
+        android:id="@+id/lifeFrame1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Player1"
+        android:layout_marginLeft="45dp" >
+
+        <cs371m.lifepointcounter.GraphicsView
+            android:id="@+id/graphicsView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/player1LifeText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/player1LifeText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/life1"
+            android:textColor="#ffffff"
+            android:textSize="75sp"
+            android:layout_centerInParent="@id/graphicsView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            autofit:minTextSize="16sp"
+            android:minLines="1"
+            android:singleLine="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lifeFrame2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Player2"
+        android:layout_toRightOf="@id/lifeFrame1"
+        android:layout_marginLeft="70dp">
+
+        <cs371m.lifepointcounter.GraphicsView
+            android:id="@+id/graphicsView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/player2LifeText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/player2LifeText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/life2"
+            android:textColor="#ffffff"
+            android:textSize="75sp"
+            android:layout_centerInParent="@id/graphicsView2"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            autofit:minTextSize="16sp"
+            android:minLines="1"
+            android:singleLine="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@id/Player3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Player3"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/lifeFrame1"
+        />
+
+    <TextView
+        android:id="@id/Player4"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Player4"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_below="@id/lifeFrame2"
+        android:layout_toRightOf="@id/Player3"
+        />
+
+    <RelativeLayout
+        android:id="@+id/lifeFrame3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Player3"
+        android:layout_marginLeft="45dp">
+
+        <cs371m.lifepointcounter.GraphicsView
+            android:id="@+id/graphicsView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/player3LifeText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/player3LifeText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/life3"
+            android:textColor="#ffffff"
+            android:textSize="75sp"
+            android:layout_centerInParent="@id/graphicsView3"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            autofit:minTextSize="16sp"
+            android:minLines="1"
+            android:singleLine="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lifeFrame4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Player4"
+        android:layout_toRightOf="@id/lifeFrame3"
+        android:layout_marginLeft="70dp">
+
+        <cs371m.lifepointcounter.GraphicsView
+            android:id="@+id/graphicsView4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/player4LifeText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/player4LifeText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/life4"
+            android:textColor="#ffffff"
+            android:textSize="75sp"
+            android:layout_centerInParent="@id/graphicsView4"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            autofit:minTextSize="16sp"
+            android:minLines="1"
+            android:singleLine="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/Player5"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Player5"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/lifeFrame3"
+        />
+
+    <TextView
+        android:id="@+id/Player6"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Player6"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_below="@id/lifeFrame4"
+        android:layout_toRightOf="@id/Player3"
+        />
+
+    <RelativeLayout
+        android:id="@+id/lifeFrame5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Player5"
+        android:layout_marginLeft="45dp">
+
+        <cs371m.lifepointcounter.GraphicsView
+            android:id="@+id/graphicsView5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/player5LifeText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/player5LifeText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/life5"
+            android:textColor="#ffffff"
+            android:textSize="75sp"
+            android:layout_centerInParent="@id/graphicsView5"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            autofit:minTextSize="16sp"
+            android:minLines="1"
+            android:singleLine="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lifeFrame6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Player6"
+        android:layout_toRightOf="@id/lifeFrame5"
+        android:layout_marginLeft="70dp">
+
+        <cs371m.lifepointcounter.GraphicsView
+            android:id="@+id/graphicsView6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/player6LifeText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/player6LifeText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/life6"
+            android:textColor="#ffffff"
+            android:textSize="75sp"
+            android:layout_centerInParent="@id/graphicsView6"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            autofit:minTextSize="16sp"
+            android:minLines="1"
+            android:singleLine="true"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/die_button"
+        android:background="@drawable/icon165"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="left"
+        android:onClick="rollDie"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/coin_button"
+        android:background="@drawable/money"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="tossCoin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/new_game_button"
+        android:background="@drawable/arrows"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="startNewGame"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<resources>
+    <!-- Developers -->
+    <string name="andy_tang">Andy Tang</string>
+    <string name="alexandra_martinez">Alexandra Martinez</string>
+    <string name="heriberto_macias">Heriberto Macias</string>
+
+    <string name="app_name">LifePointCounter</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_player">+</string>
+    <string name="remove_player">-</string>
+    <string name="Player1">Player1</string>
+    <string name="Player2">Player2</string>
+    <string name="Player3">Player3</string>
+    <string name="Player4">Player4</string>
+    <string name="Player5">Player5</string>
+    <string name="Player6">Player6</string>
+    <string name="Player7">Player7</string>
+    <string name="Player8">Player8</string>
+
+    <string name="life1">20</string>
+    <string name="life2">20</string>
+    <string name="life3">20</string>
+    <string name="life4">20</string>
+    <string name="life5">20</string>
+    <string name="life6">20</string>
+
+    <string name="starting_life_total">20</string>
+    <string name="tap_life_change">1</string>
+    <string name="swipe_life_change">5</string>
+    <string name="background">Background</string>
+    <string name="sound_effects">Sound Effects</string>
+    <string name="font">Font</string>
+    <string name="frame_color">Black Color</string>
+
+    <string name="tutorial_title">Life Point Counter</string>
+    <string name="tutorial_text">Tap top or bottom of frames to change life\n\nSwipe Up/Down to increase/decrease by larger increments</string>
+</resources>

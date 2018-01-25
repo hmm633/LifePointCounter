@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_tutorial"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:layout_gravity="center_horizontal">
+
+
+    <TextView
+        android:id="@+id/tutorial_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/tutorial_text"
+        android:textColorHighlight="@android:color/white"
+        android:textColor="@android:color/white"/>
+
+    <CheckBox
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tutorial_dialogue_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Do not show again"
+        android:onClick="onCheckBoxClicked"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/white">
+    </CheckBox>
+
+    <Button
+        android:id="@+id/tutorial_okay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="OK"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_light"
+        android:onClick="okay_Tutorial"/>
+
+</LinearLayout>

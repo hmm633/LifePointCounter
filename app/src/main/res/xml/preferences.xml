@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <EditTextPreference
+        android:key="starting_life"
+        android:inputType="number"
+        android:defaultValue="@string/starting_life_total"
+        android:title="Starting life"
+        android:summary="@string/starting_life_total"
+        />
+
+    <EditTextPreference
+        android:key="tap_life_change"
+        android:title="Tap Life Change"
+        android:summary="@string/tap_life_change"
+        android:inputType="number"
+        android:defaultValue="@string/tap_life_change"
+        />
+
+    <EditTextPreference
+        android:key="swipe_life_change"
+        android:title="Swipe Life Change"
+        android:summary="@string/swipe_life_change"
+        android:inputType="number"
+        android:defaultValue="@string/swipe_life_change"
+        />
+
+    <!--For Beta or other future release (Comment out for alpha) -->
+
+    <!--<PreferenceCategory-->
+        <!--android:title="General Settings"-->
+        <!--android:key="general_settings">-->
+
+        <!--<ListPreference-->
+            <!--android:key="background"-->
+            <!--android:title="Background"-->
+            <!--android:summary=""-->
+            <!--android:defaultValue="Default"-->
+            <!--/>-->
+
+        <!--<CheckBoxPreference-->
+            <!--android:key="sound_effects"-->
+            <!--android:title="Sound Effects"-->
+            <!--android:defaultValue="true"-->
+            <!--android:summary="" />-->
+
+        <!--<ListPreference-->
+            <!--android:key="font"-->
+            <!--android:title="Font"-->
+            <!--android:summary=""-->
+            <!--android:defaultValue="Font"-->
+            <!--/>-->
+
+        <!--<ListPreference-->
+            <!--android:key="frame_color"-->
+            <!--android:title="Frame Color"-->
+            <!--android:summary=""-->
+            <!--android:defaultValue="@string/frame_color"-->
+            <!--/>-->
+
+    <!--</PreferenceCategory>-->
+
+
+
+
+</PreferenceScreen>

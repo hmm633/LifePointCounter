@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cs371m.lifepointcounter.ScoreScreen"
+    android:background="#626465">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/add_player"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/add_player"
+            android:background="@color/addPlayerColorLight"
+            android:foregroundGravity="left"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="addPlayer"
+            android:textSize="35sp"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"/>
+
+        <Button
+            android:id="@+id/remove_player"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="@string/remove_player"
+            android:background="@color/removePlayerColorDark"
+            android:foregroundGravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="removePlayer"
+            android:textSize="35sp"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"/>
+    </RelativeLayout>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Player1"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+    </TableRow>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <cs371m.lifepointcounter.GraphicsView
+            android:id="@+id/graphicsView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/player1LifeText"
+            android:text="@string/life1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:textSize="140sp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:maxLines="1"
+            autofit:minTextSize="16sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/die_button"
+            android:background="@drawable/icon165"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:onClick="rollDie"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/coin_button"
+            android:background="@drawable/money"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="tossCoin"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/new_game_button"
+            android:background="@drawable/arrows"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="startNewGame"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

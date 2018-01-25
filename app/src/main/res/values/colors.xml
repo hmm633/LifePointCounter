@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundDefault">#626465</color>
+    <color name="textDefault">#FFFFFF</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="addPlayerColorLight">#35DE0B</color>
+    <color name="addPlayerColorDark">#26A108</color>
+    <color name="removePlayerColorLight">#fc5e48</color>
+    <color name="removePlayerColorDark">#893327</color>
+</resources>
